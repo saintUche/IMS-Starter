@@ -1,7 +1,23 @@
 Coverage: 34%
 # Project Title
 
-One Paragraph of project description goes here
+The brief for this project was to design and produce an application that an end user can interact with via a CLI. The application needed to be an inventory management system that can carry out the following functions:
+•	Add a customer to the system
+•	View all customers in the system
+•	Update a customer in the system
+•	Delete a customer in the system.
+•	Add an item to the system
+•	View all items in the system
+•	Update an item in the system
+•	Delete an item in the system
+•	Create an order in the system.
+•	View all orders in the system.
+•	Delete an order in the system
+•	Add an item to an order.
+•	Calculate a cost for an order.
+•	Delete an item in an order
+
+
 
 ## Getting Started
 
