@@ -23,7 +23,7 @@ public class CustomerDAOTest {
 
 	@Test
 	public void testCreate() {
-		final Customer created = new Customer(1L, "chris", "perrins");
+		final Customer created = new Customer(2L, "chris", "perrins");
 		assertEquals(created, DAO.create(created));
 	}
 
@@ -54,6 +54,7 @@ public class CustomerDAOTest {
 
 	@Test
 	public void testDelete() {
+		System.out.println(DAO.readLatest());
 		assertEquals(1, DAO.delete(1));
 	}
 }
