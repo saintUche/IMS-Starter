@@ -82,10 +82,11 @@ Mockito was used to test the controller classes and checked to see if the CRUD a
 EqualsVerifier can be used in JUnit unit tests to verify whether the contract for the equals and hashCode methods is met.
 EqualsVerifier was used to test the class methods.
 
-![image](https://user-images.githubusercontent.com/79328765/178015265-3e93c973-c770-47a1-add1-888f2bd97ea6.png)
+![image](https://user-images.githubusercontent.com/79328765/178016687-ad130502-29ee-435b-a289-0060bf87dc82.png)
 
 
-Test coverage shows that 90% of tests passed. 
+
+Test coverage shows that 93% of tests passed. 
 
 
 
@@ -104,7 +105,7 @@ The user has created an order and when the order table is read you can see the o
 ### Future work
 In the future I would like to get on to creating a log in system for user.
 I would like to try an implete a different database scheme which has a forth table orderline(id, FK(order id), FK(customer id), itemid)
-Could have got a high test pass rate if managed to figure how to delete customer that has an order placed.
+
 
 ## Links 
 
