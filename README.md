@@ -1,5 +1,9 @@
-Coverage: 34%
-# Project Title
+
+# Software Core Fundamental Project
+
+This repository contains my deliverable for the QA software fundamental project.
+
+### Project Brief
 
 The brief for this project was to design and produce an application that an end user can interact with via a CLI. The application needed to be an inventory management system that can carry out the following functions:
 •	Add a customer to the system
