@@ -24,5 +24,5 @@ CREATE TABLE IF NOT EXISTS `orders`(
     `itemIds` TEXT,
     `order_cost` FLOAT(2),
     PRIMARY KEY(`id`),
-    FOREIGN KEY (`customer_id`) REFERENCES customers(id)
+    FOREIGN KEY (`customer_id`) REFERENCES customers(id) ON DELETE CASCADE
 );
