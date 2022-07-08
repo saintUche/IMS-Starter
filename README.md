@@ -19,66 +19,56 @@ The brief for this project was to design and produce an application that an end 
 
 
 
-## Getting Started
+## APP DESIGN
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+UML design shows how give classes are related. The user user interacts in the same way and they all follow a the same order of instructions. First, the given object must be defined in its object class. If the object is to be interacted with it is done so through the item controller where the user decides which CRUD action to perform. The object DAO class then send querys to the database to carry out the CRUD task. 
 
-### Prerequisites
 
-What things you need to install the software and how to install them
+The logic for the ER diagram is as follows.
 
-```
-Give examples
-```
+Order table:
+The Order descripton states that every order must have a customer. hence customer_id is a foreign key that references the cutomer_ ID in the customer table.
+Must be able to read all items in an order so the items and item ids are stored in the table as readable strings.
+The order must have a cost which can is calculated by getting item ids int the item_ids column 
 
-### Installing
+Customer:
+Each customer must have a name.
 
-A step by step series of examples that tell you how to get a development env running
+Item: 
+Each item must have a name and a cost 
 
-Say what the step will be
 
-```
-Give the example
-```
+### CI interface
 
-And repeat
+In addition to the above requirements, the project required the implementation of several stages of a typical CI pipeline. These were project tracking, version control, development environment and build server. For project tracking agile was used to create a Kanban board. Story points and labels were assigned to each item.
 
-```
-until finished
-```
+For version control, git was used, with the project repository hosted on github. Version control via git allows changes to the project to be made and committed whilst keeping the commit history for access to earlier versions. GitHub as a repository hosting service allows the repository to be stored away from the development environment, as well as providing webhooks, which send http POST requests to the build server to automate building and testing.
 
-End with an example of getting some data out of the system or using it for a little demo
+The Databse was in SQL and back-end programming was done in java and the build tool used was Maven.  Maven is chiefly used for Java-based projects, helping to download dependencies, which refers to the libraries or JAR files. The tool helps get the right JAR files for each project as there may be different versions of separate packages.
 
-## Running the tests
 
-Explain how to run the automated tests for this system. Break down into which tests and what they do
+### Testing
 
-### Unit Tests 
+Testing the ims was an essential part of the development process. Two types of testing were implemented:
 
-Explain what these tests test, why and how to run them
+Unit testing tests units of functionality (i.e functions) within the app. Unit tests were written for create, read, update and delete functionality, to ensure that these worked as intended.
+Integration testing tests the function of the app in an as-live environment, being able to simulate keyboard input and mouse clicks to ensure that these elements of the app function as intended. Integration tests were written for many of the forms employed in the app.
 
-```
-Give an example
-```
+JUnit is the testing framework that is extensively used for java projects built in the maven project format for unit testing purposes.
+JUnit was used to test the DAO files and checked to see if the database queries functioned as expected. 
 
-### Integration Tests 
-Explain what these tests test, why and how to run them
+Mockito is a mocking framework, JAVA-based library that is used for effective unit testing of JAVA applications. Mockito is used to mock interfaces so that a dummy functionality can be added to a mock interface that can be used in unit testing.
+Mockito was used to test the controller classes and checked to see if the CRUD actions performed gave the expected outputs. 
 
-```
-Give an example
-```
+EqualsVerifier can be used in JUnit unit tests to verify whether the contract for the equals and hashCode methods is met.
+EqualsVerifier was used to test the class methods.
 
-### And coding style tests
 
-Explain what these tests test and why
+### The ims system 
 
-```
-Give an example
-```
 
-## Deployment
 
-Add additional notes about how to deploy this on a live system
+
 
 ## Built With
 
@@ -90,7 +80,7 @@ We use [SemVer](http://semver.org/) for versioning.
 
 ## Authors
 
-* **Chris Perrins** - *Initial work* - [christophperrins](https://github.com/christophperrins)
+* **Uche Egbon** - *Initial work* - [christophperrins](https://github.com/christophperrins)
 
 ## License
 
@@ -100,6 +90,4 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+
