@@ -101,6 +101,9 @@ The user has created an order and when the order table is read you can see the o
 In the future I would like to get on to creating a log in system for user.
 I would like to try an implete a different database scheme which has a forth table orderline(id, FK(order id), FK(customer id), itemid)
 
+## Links 
+
+* **Jira** - https://ucheegbon.atlassian.net/jira/software/projects/IMS2/settings/details
 
 ## Built With
 
