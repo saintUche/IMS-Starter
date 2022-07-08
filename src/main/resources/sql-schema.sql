@@ -17,3 +17,13 @@ CREATE TABLE IF NOT EXISTS `ims`.`items`(
      `item_cost` FLOAT(2) NOT NULL,
      PRIMARY KEY(`id`)
 );
+
+CREATE TABLE IF NOT EXISTS `ims`.`orders`(
+    `id` INT(11) NOT NULL AUTO_INCREMENT,
+    `customer_id` INT(11) NOT NULL,
+    `items` TEXT,
+    `itemIds` TEXT,
+    `order_cost` float,
+    PRIMARY KEY(`id`),
+    FOREIGN KEY (`customer_id`) REFERENCES customers(id)
+);
